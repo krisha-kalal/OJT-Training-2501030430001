@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins';
+    background-color: #f5f7f2;
+    color: #2d2d2d;
+}
+@font-face {
+    font-family: 'Ayaha';
+    src: url('AyahaRegularDemowthswshes-7OLKK.ttf');
+}
+header {
+    background-color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+}
+.logo {
+    font-family: 'Ayaha';
+    font-size: 45px;
+    color: #1f5422;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-size: 17px;
+}
+nav a:hover {
+    color: #43a047;
+    transition: 0.3s;
+    border-bottom: 3px solid #43a047;
+}
+.hero {
+    min-height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 8%;
+    background-color: #f5f7f2;
+    gap: 50px;
+}
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+.hero h1 {
+    font-size: 70px;
+    color: rgb(57, 57, 57);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+.hero p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 550px;
+}
+.hero button {
+    padding: 14px 34px;
+    border: none;
+    background-color: #43a047;
+    color: white;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero button:hover {
+    background-color: #2e7d32;
+}
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+main {
+    padding: 100px 8%;
+}
+.best-sellers {
+    margin-top: 20px;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-title h2 {
+    font-size: 42px;
+    color: #1f5422;
+    margin-bottom: 15px;
+}
+.section-title p {
+    color: #666;
+    font-size: 17px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 35px;
+}
+.product-card {
+    background-color: white;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: 0.35s;
+}
+.product-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+.tag {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background-color: #43a047;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.card-content {
+    padding: 25px;
+}
+.card-content h3 {
+    color: #1f5422;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+.card-content h3:hover {
+    color: #43a047;
+}
+.card-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.price {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2e7d32;
+}
+.product-bottom button {
+    border: none;
+    background-color: #43a047;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.product-bottom button:hover {
+    background-color: #1f5422;
+}
+.stats-section {
+    margin-top: 60px;
+    padding: 50px 6%;
+    background-color: #f5f7f2;
+    border-radius: 25px;
+}
+.stats-table {
+    width: 100%;
+    border-spacing: 20px;
+    text-align: center;
+}
+.stats-table td {
+    background-color: white;
+    padding: 35px 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+.stats-table td:hover {
+    transform: translateY(-8px);
+}
+.stats-table h3 {
+    font-size: 42px;
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+.stats-table p {
+    color: #666;
+    font-size: 16px;
+    font-weight: 500;
+}
+.faq-section {
+    margin-top: 100px;
+}
+.faq-container {
+    max-width: 900px;
+    margin: auto;
+}
+.faq-item {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+.faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 24px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #2e7d32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-item summary span {
+    font-size: 28px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.faq-item[open] summary span {
+    transform: rotate(45deg);
+}
+.faq-item p {
+    padding: 0 30px 25px;
+    color: #666;
+    line-height: 1.8;
+    text-align: left;
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+footer {
+    background-color: #1b1b1b;
+    color: white;
+    padding: 30px 8%;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+footer .logo {
+    font-family: 'Ayaha';
+    font-size: 50px;
+    color: #43a047;
+}
+.footer-left p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #ccc;
+}
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: #43a047;
+}
+    </style>
+    <title>Leafloom</title>
+</head>
+<body>
+    <header>
+        <div class="logo">Leafloom</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Shop Plants</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="logo">Bring Nature<br>Indoors</h1>
+            <p>
+                Discover premium indoor plants, aesthetic pots,
+                and eco-friendly greenery to refresh your home naturally.
+            </p>
+            <button>Explore Collection</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1485955900006-10f4d324d411?q=80&w=987&auto=format&fit=crop">
+        </div>
+    </section>
+    <main>
+        <section class="best-sellers">
+            <div class="section-title">
+                <h2>Best Sellers</h2>
+                <p>
+                    Discover our most loved indoor plants curated
+                    for modern and aesthetic living spaces.
+                </p>
+            </div>
+            <div class="products">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1545241047-6083a3684587?q=80&w=1887&auto=format&fit=crop">
+                    </div>
+                    <div class="card-content">
+                        <h3>Monstera Deliciosa</h3>
+                        <p>
+                            A tropical statement plant perfect for stylish
+                            interiors and cozy green corners.
+                        </p>
+                        <div class="product-bottom">
+                            <span class="price">₹899</span>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1974&auto=format&fit=crop">
+                    </div>
+                    <div class="card-content">
+                        <h3>Snake Plant</h3>
+                        <p>
+                            Low-maintenance indoor plant known for its
+                            air-purifying qualities and elegant appearance.
+                        </p>
+                        <div class="product-bottom">
+                            <span class="price">₹699</span>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1512428813834-c702c7702b78?q=80&w=1887&auto=format&fit=crop">
+                    </div>
+                    <div class="card-content">
+                        <h3>Peace Lily</h3>
+                        <p>
+                            Elegant flowering plant that adds freshness,
+                            beauty, and calmness to any room.
+                        </p>
+                        <div class="product-bottom">
+                            <span class="price">₹999</span>
+                            <button>Add to Cart</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <section class="stats-section">
+    <div class="section-title">
+        <h2>Leafloom In Numbers</h2>
+        <p>
+            Trusted by thousands of plant lovers across the country.
+        </p>
+    </div>
+    <table class="stats-table">
+        <tr>
+            <td>
+                <h3 class="counter" data-target="5000">0</h3>
+                <p>Happy Customers</p>
+            </td>
+            <td>
+                <h3 class="counter" data-target="850">0</h3>
+                <p>Plant Varieties</p>
+            </td>
+            <td>
+                <h3 class="counter" data-target="5000">0</h3>
+                <p>Orders Delivered</p>
+            </td>
+            <td>
+                <h3 class="counter" data-target="98">0</h3>
+                <p>Positive Reviews %</p>
+            </td>
+        </tr>
+    </table>
+</section>
+    <section class="faq-section">
+        <div class="section-title"><h2>Frequently Asked Questions</h2></div>
+        <div class="faq-container">
+            <details class="faq-item">
+                <summary>
+                    How often should I water indoor plants?
+                    <span>+</span>
+                </summary>
+                <p>
+                    Most indoor plants should be watered once or twice a week,
+                    depending on sunlight, humidity, and plant type.
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    Do your plants come with pots?
+                    <span>+</span>
+                </summary>
+                <p>
+                    Yes, selected plants include decorative pots.
+                    Product details mention pot availability clearly.
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    Which plants are best for beginners?
+                    <span>+</span>
+                </summary>
+                <p>
+                    Snake Plant, ZZ Plant, and Peace Lily are excellent
+                    low-maintenance options for beginners.
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    Do you provide plant care guidance?
+                    <span>+</span>
+                </summary>
+                <p>
+                    Yes, every order includes basic plant care instructions
+                    and maintenance tips.
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    Are your plants pet friendly?
+                    <span>+</span>
+                </summary>
+                <p>
+                    Some plants are pet friendly while others may not be.
+                    Please check the plant description before purchasing.
+                </p>
+            </details>
+            <details class="faq-item">
+                <summary>
+                    How long does delivery take?
+                    <span>+</span>
+                </summary>
+                <p>
+                    Standard delivery usually takes 3–7 business days
+                    depending on your location.
+                </p>
+            </details>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-left">
+            <div class="logo">Leafloom</div>
+            <p>© 2026 Leafloom. All Rights Reserved.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Home</a><br>
+            <a href="#">Shop Plants</a><br>
+            <a href="#">About</a><br>
+            <a href="#">Contact</a>
+        </div>
+    </footer>
+<script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
+            const current = +counter.innerText;
+            const increment = target / 100;
+            if(current < target) {
+                counter.innerText = `${Math.ceil(current + increment)}`;
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCounter();
+    });
+</script>
+</body>
+</html>
