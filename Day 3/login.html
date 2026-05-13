@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+
+    <style>
+        .login-section{
+            min-height:90vh;
+            background:#fafaf7;
+            display:flex;
+            justify-content:center;
+            align-items:flex-start;
+            padding:90px 20px;
+        }
+
+        .login-container{
+            width:100%;
+            max-width:620px;
+            text-align:left;
+            background:white;
+            padding:45px;
+            border-radius:24px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.08)
+        }
+
+        .login-container h2{
+            font-size:36px;
+            color:#1f1f1f;
+            margin-bottom:12px;
+            font-weight:600;
+        }
+
+        .login-container p{
+            color:#777;
+            font-size:17px;
+            margin-bottom:40px;
+        }
+
+        .login-container p a,
+        .forgot-password,
+        .return-store{
+            color:#2e7d32;
+            text-decoration:none;
+            font-weight:500;
+        }
+
+        .login-container p a:hover,
+        .forgot-password:hover,
+        .return-store:hover{
+            text-decoration:underline;
+        }
+
+        .login-form{
+            width:100%;
+        }
+
+        .login-form input{
+            width:100%;
+            padding:18px 22px;
+            margin-bottom:22px;
+            border:1px solid #d7e4d4;
+            background:transparent;
+            border-radius:10px;
+            font-size:15px;
+            font-family:'Poppins',sans-serif;
+            outline:none;
+            transition:0.3s;
+        }
+
+        .login-form input:focus{
+            border-color:#43a047;
+        }
+
+        .forgot-password{
+            display:inline-block;
+            margin-bottom:35px;
+            font-size:15px;
+        }
+
+        .login-form button{
+            width:100%;
+            padding:18px;
+            border:none;
+            border-radius:10px;
+            background:#43a047;
+            color:white;
+            font-size:15px;
+            font-weight:600;
+            letter-spacing:1px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .login-form button:hover{
+            background:#2e7d32;
+        }
+
+        .return-store{
+            display:inline-block;
+            margin-top:28px;
+            font-size:16px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Leafloom</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Collections</a>
+            <a href="login.html">Login</a>
+            <a href="#">Cart</a>
+        </nav>
+    </header>
+
+    <section class="login-section">
+
+        <div class="login-container">
+
+            <h2>Login</h2>
+
+            <p>
+                Don't have an account yet?
+                <a href="register.html">Create account</a>
+            </p>
+
+            <form class="login-form">
+
+                <input type="email" placeholder="Email">
+
+                <input type="password" placeholder="Password">
+
+                <a href="#" class="forgot-password">
+                    Forgot your password?
+                </a>
+
+                <button type="submit">SIGN IN</button>
+
+            </form>
+
+            <a href="header.html" class="return-store">
+                Return to Store
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="footer-grid">
+
+            <div class="footer-col">
+                <span class="footer-logo">Leafloom</span>
+
+                <p style="color:#999;margin-bottom:20px;">
+                    Transforming living spaces with soul and soil since 2021.
+                </p>
+            </div>
+
+            <div class="footer-col">
+                <h4>Shop</h4>
+
+                <ul>
+                    <li><a href="#">Indoor Plants</a></li>
+                    <li><a href="#">Ceramic Pots</a></li>
+                    <li><a href="#">Plant Care Kits</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+
+                <ul>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col newsletter">
+
+                <h4>Stay Green</h4>
+
+                <p style="color:#999;font-size:14px;margin-bottom:15px;">
+                    Get plant care tips and weekly deals.
+                </p>
+
+                <input type="email" placeholder="Your email address">
+
+                <button class="btn-primary" style="width:100%;">
+                    Join the Club
+                </button>
+
+            </div>
+
+        </div>
+
+        <div style="text-align:center;border-top:1px solid #222;padding-top:30px;color:#555;font-size:13px;">
+            © 2026 Leafloom Greenery Pvt Ltd. All rights reserved.
+        </div>
+
+    </footer>
+
+</body>
+</html>
