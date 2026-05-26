@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Div Using jQuery</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container{
+            width: 300px;
+            min-height: 200px;
+            border: 2px solid black;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        #box{
+            width: 120px;
+            padding: 20px;
+            background-color: lightgreen;
+            margin: 10px auto;
+            border-radius: 8px;
+        }
+
+        button{
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Move One Div Inside Another Using jQuery</h2>
+
+    <div class="container" id="container1">
+        <h3>Container 1</h3>
+
+        <div id="box">
+            Moving Div
+        </div>
+    </div>
+
+    <div class="container" id="container2">
+        <h3>Container 2</h3>
+    </div>
+
+    <button id="moveBtn">Move Div</button>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#moveBtn").click(function(){
+
+                $("#box").appendTo("#container2");
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

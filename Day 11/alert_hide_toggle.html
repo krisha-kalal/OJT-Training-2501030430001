@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #box{
+            width: 300px;
+            padding: 30px;
+            margin: 20px auto;
+            background-color: lightgreen;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        button{
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Simple jQuery Program</h2>
+
+    <div id="box">
+        Welcome to jQuery Demo
+    </div>
+
+    <button id="alertBtn">Alert</button>
+    <button id="hideBtn">Hide</button>
+    <button id="toggleBtn">Toggle</button>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#alertBtn").click(function(){
+                alert("Button Clicked!");
+            });
+
+            $("#hideBtn").click(function(){
+                $("#box").hide();
+            });
+
+            $("#toggleBtn").click(function(){
+                $("#box").toggle();
+            });
+
+        });
+    </script>
+
+</body>
+</html>
