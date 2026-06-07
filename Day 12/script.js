@@ -1,6 +1,7 @@
 const plantDataset = {
     "monstera": { 
         id: "monstera", 
+        cat: "indoor",
         title: "Monstera Deliciosa", 
         tag: "Popular",
         subtitle: "Large | Easy Care", 
@@ -15,6 +16,7 @@ const plantDataset = {
     },
     "snake": { 
         id: "snake", 
+        cat: "indoor",
         title: "Snake Plant", 
         tag: "Air Purifier",
         subtitle: "Medium | Air Purifier", 
@@ -29,6 +31,7 @@ const plantDataset = {
     },
     "peace-lily": { 
         id: "peace-lily", 
+        cat: "indoor",
         title: "Peace Lily", 
         tag: "Trending",
         subtitle: "Small | Flowering", 
@@ -43,6 +46,7 @@ const plantDataset = {
     },
     "fiddle-leaf": { 
         id: "fiddle-leaf", 
+        cat: "indoor",
         title: "Fiddle Leaf Fig", 
         tag: "Premium Decor",
         subtitle: "XL | Premium Decor", 
@@ -57,6 +61,7 @@ const plantDataset = {
     },
     "zz-plant": { 
         id: "zz-plant", 
+        cat: "indoor",
         title: "ZZ Plant", 
         tag: "Best Seller",
         subtitle: "Low Maintenance", 
@@ -71,6 +76,7 @@ const plantDataset = {
     },
     "areca-palm": { 
         id: "areca-palm", 
+        cat: "indoor",
         title: "Areca Palm", 
         tag: "Indoor Tropical",
         subtitle: "Indoor Tropical", 
@@ -85,6 +91,7 @@ const plantDataset = {
     },
     "pothos": { 
         id: "pothos", 
+        cat: "climbers",
         title: "Pothos", 
         tag: "Trailing Vine",
         subtitle: "Trailing Vine", 
@@ -98,7 +105,8 @@ const plantDataset = {
         care: "Trim trailing tips occasionally using clean shears to maximize canopy thickness near the base. Leaves curl slightly as a clear request for moisture inputs."
     },
     "rubber-plant": { 
-        id: "rubber-plant", 
+        id: "rubber-plant",
+        cat: "indoor", 
         title: "Rubber Plant", 
         tag: "New Arrival",
         subtitle: "Glossy Foliage", 
@@ -113,6 +121,7 @@ const plantDataset = {
     },
     "boston-fern": { 
         id: "boston-fern", 
+        cat: "indoor",
         title: "Boston Fern", 
         tag: "Soft Greenery",
         subtitle: "Soft Indoor Greenery", 
@@ -127,6 +136,7 @@ const plantDataset = {
     },
     "aloe-vera": { 
         id: "aloe-vera", 
+        cat: "outdoor",
         title: "Aloe Vera", 
         tag: "Organic",
         subtitle: "Medicinal Plant", 
@@ -141,6 +151,7 @@ const plantDataset = {
     },
     "calathea": { 
         id: "calathea", 
+        cat: "indoor",
         title: "Calathea", 
         tag: "Artistic Leaf",
         subtitle: "Patterned Leaves", 
@@ -155,6 +166,7 @@ const plantDataset = {
     },
     "jade-plant": { 
         id: "jade-plant", 
+        cat: "outdoor",
         title: "Jade Plant", 
         tag: "Lucky Plant",
         subtitle: "Succulent Decor", 
@@ -169,6 +181,7 @@ const plantDataset = {
     },
     "philodendron": { 
         id: "philodendron", 
+        cat: "climbers",
         title: "Philodendron", 
         tag: "Classic Choice",
         subtitle: "Leafy Indoor Plant", 
@@ -183,6 +196,7 @@ const plantDataset = {
     },
     "succulent-mix": { 
         id: "succulent-mix", 
+        cat: "outdoor",
         title: "Succulent Mix", 
         tag: "Minimalist",
         subtitle: "Desk Decor Plants", 
@@ -197,6 +211,7 @@ const plantDataset = {
     },
     "bonsai-tree": { 
         id: "bonsai-tree", 
+        cat: "flowering",
         title: "Bonsai Tree", 
         tag: "Premium",
         subtitle: "Artistic Indoor Tree", 
